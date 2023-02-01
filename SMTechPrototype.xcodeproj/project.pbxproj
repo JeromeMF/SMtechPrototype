@@ -7,18 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0238C29429882EB400174A02 /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238C29329882EB400174A02 /* AudioModel.swift */; };
+		0238C29E298A5FB700174A02 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238C29D298A5FB700174A02 /* ContentModel.swift */; };
+		0238C2A1298AF0E400174A02 /* SituationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238C2A0298AF0E400174A02 /* SituationsView.swift */; };
 		028EED622983EA3C00385273 /* SMTechPrototypeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028EED612983EA3C00385273 /* SMTechPrototypeApp.swift */; };
 		028EED642983EA3C00385273 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028EED632983EA3C00385273 /* ContentView.swift */; };
 		028EED662983EA3D00385273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 028EED652983EA3D00385273 /* Assets.xcassets */; };
 		028EED692983EA3D00385273 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 028EED682983EA3D00385273 /* Preview Assets.xcassets */; };
+		028EED7B2983EFE400385273 /* ContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028EED7A2983EFE400385273 /* ContentListView.swift */; };
+		028EED7E2983F08900385273 /* ContentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028EED7D2983F08900385273 /* ContentListViewModel.swift */; };
+		028EED812983F33E00385273 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028EED802983F33E00385273 /* CardView.swift */; };
+		028EED852984453900385273 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028EED842984453900385273 /* ColorExtension.swift */; };
+		028EED882984474400385273 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 028EED872984474400385273 /* Apollo */; };
+		028EED8B29844D5600385273 /* Contentful in Frameworks */ = {isa = PBXBuildFile; productRef = 028EED8A29844D5600385273 /* Contentful */; };
+		028EED8D29844DB400385273 /* ContenfulAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028EED8C29844DB400385273 /* ContenfulAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0238C29329882EB400174A02 /* AudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
+		0238C29D298A5FB700174A02 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		0238C2A0298AF0E400174A02 /* SituationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationsView.swift; sourceTree = "<group>"; };
 		028EED5E2983EA3C00385273 /* SMTechPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMTechPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		028EED612983EA3C00385273 /* SMTechPrototypeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMTechPrototypeApp.swift; sourceTree = "<group>"; };
 		028EED632983EA3C00385273 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		028EED652983EA3D00385273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		028EED682983EA3D00385273 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		028EED7A2983EFE400385273 /* ContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListView.swift; sourceTree = "<group>"; };
+		028EED7D2983F08900385273 /* ContentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListViewModel.swift; sourceTree = "<group>"; };
+		028EED802983F33E00385273 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		028EED842984453900385273 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		028EED8C29844DB400385273 /* ContenfulAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContenfulAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +44,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028EED8B29844D5600385273 /* Contentful in Frameworks */,
+				028EED882984474400385273 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0238C29F298AF0D200174A02 /* SituationsView */ = {
+			isa = PBXGroup;
+			children = (
+				0238C2A0298AF0E400174A02 /* SituationsView.swift */,
+			);
+			path = SituationsView;
+			sourceTree = "<group>";
+		};
 		028EED552983EA3C00385273 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +79,14 @@
 		028EED602983EA3C00385273 /* SMTechPrototype */ = {
 			isa = PBXGroup;
 			children = (
-				028EED612983EA3C00385273 /* SMTechPrototypeApp.swift */,
-				028EED632983EA3C00385273 /* ContentView.swift */,
-				028EED652983EA3D00385273 /* Assets.xcassets */,
+				028EED762983EDBD00385273 /* Extensions */,
+				028EED752983EDB000385273 /* Models */,
+				028EED742983EDA900385273 /* Resources */,
+				028EED732983EDA100385273 /* Services */,
+				028EED722983ED9A00385273 /* SupportingFiles */,
+				028EED712983ED9500385273 /* Utils */,
+				028EED702983ED8700385273 /* Views */,
+				028EED6F2983EB4900385273 /* ViewModels */,
 				028EED672983EA3D00385273 /* Preview Content */,
 			);
 			path = SMTechPrototype;
@@ -65,6 +98,97 @@
 				028EED682983EA3D00385273 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		028EED6F2983EB4900385273 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				028EED7C2983F00700385273 /* ContentListViewModel */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		028EED702983ED8700385273 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0238C29F298AF0D200174A02 /* SituationsView */,
+				028EED7F2983F2A200385273 /* CardView */,
+				028EED772983EF6E00385273 /* ContentListView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		028EED712983ED9500385273 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		028EED722983ED9A00385273 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				028EED612983EA3C00385273 /* SMTechPrototypeApp.swift */,
+				028EED632983EA3C00385273 /* ContentView.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		028EED732983EDA100385273 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				028EED8C29844DB400385273 /* ContenfulAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		028EED742983EDA900385273 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				028EED652983EA3D00385273 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		028EED752983EDB000385273 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0238C29329882EB400174A02 /* AudioModel.swift */,
+				0238C29D298A5FB700174A02 /* ContentModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		028EED762983EDBD00385273 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				028EED842984453900385273 /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		028EED772983EF6E00385273 /* ContentListView */ = {
+			isa = PBXGroup;
+			children = (
+				028EED7A2983EFE400385273 /* ContentListView.swift */,
+			);
+			path = ContentListView;
+			sourceTree = "<group>";
+		};
+		028EED7C2983F00700385273 /* ContentListViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				028EED7D2983F08900385273 /* ContentListViewModel.swift */,
+			);
+			path = ContentListViewModel;
+			sourceTree = "<group>";
+		};
+		028EED7F2983F2A200385273 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				028EED802983F33E00385273 /* CardView.swift */,
+			);
+			path = CardView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +207,10 @@
 			dependencies = (
 			);
 			name = SMTechPrototype;
+			packageProductDependencies = (
+				028EED872984474400385273 /* Apollo */,
+				028EED8A29844D5600385273 /* Contentful */,
+			);
 			productName = SMTechPrototype;
 			productReference = 028EED5E2983EA3C00385273 /* SMTechPrototype.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +239,10 @@
 				Base,
 			);
 			mainGroup = 028EED552983EA3C00385273;
+			packageReferences = (
+				028EED862984474400385273 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				028EED8929844D5600385273 /* XCRemoteSwiftPackageReference "contentful" */,
+			);
 			productRefGroup = 028EED5F2983EA3C00385273 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +269,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0238C29429882EB400174A02 /* AudioModel.swift in Sources */,
+				0238C2A1298AF0E400174A02 /* SituationsView.swift in Sources */,
+				028EED7E2983F08900385273 /* ContentListViewModel.swift in Sources */,
 				028EED642983EA3C00385273 /* ContentView.swift in Sources */,
+				0238C29E298A5FB700174A02 /* ContentModel.swift in Sources */,
 				028EED622983EA3C00385273 /* SMTechPrototypeApp.swift in Sources */,
+				028EED7B2983EFE400385273 /* ContentListView.swift in Sources */,
+				028EED812983F33E00385273 /* CardView.swift in Sources */,
+				028EED8D29844DB400385273 /* ContenfulAPI.swift in Sources */,
+				028EED852984453900385273 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +479,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		028EED862984474400385273 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		028EED8929844D5600385273 /* XCRemoteSwiftPackageReference "contentful" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/contentful/contentful.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		028EED872984474400385273 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 028EED862984474400385273 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		028EED8A29844D5600385273 /* Contentful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 028EED8929844D5600385273 /* XCRemoteSwiftPackageReference "contentful" */;
+			productName = Contentful;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 028EED562983EA3C00385273 /* Project object */;
 }

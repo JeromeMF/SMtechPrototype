@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5B164E5B-58BC-4BC2-AE33-522ACE1EB42F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A850AE64-8BDB-4D88-8A1E-27ECF6BCDD07"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMTechPrototype/ViewModels/ContentListViewModel/ContentListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "getContent()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A850AE64-8BDB-4D88-8A1E-27ECF6BCDD07 - b2491311cc7f5810"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Contentful.Entry) -&gt; () in closure #1 (Swift.Result&lt;Contentful.HomogeneousArrayResponse&lt;Contentful.Entry&gt;, Swift.Error&gt;) -&gt; () in SMTechPrototype.ContentListViewModel.getContent() -&gt; ()"
+                  moduleName = "SMTechPrototype"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jerome/Projects/7mind/SMTechPrototype/SMTechPrototype/ViewModels/ContentListViewModel/ContentListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "1812">
+               </Location>
+               <Location
+                  uuid = "A850AE64-8BDB-4D88-8A1E-27ECF6BCDD07 - b2491311cc7f5810"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Contentful.Entry) -&gt; () in closure #1 (Swift.Result&lt;Contentful.HomogeneousArrayResponse&lt;Contentful.Entry&gt;, Swift.Error&gt;) -&gt; () in SMTechPrototype.ContentListViewModel.getContent() -&gt; ()"
+                  moduleName = "SMTechPrototype"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jerome/Projects/7mind/SMTechPrototype/SMTechPrototype/ViewModels/ContentListViewModel/ContentListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "1972">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F25F88EF-820F-4740-BA6E-7847E64481AF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMTechPrototype/ViewModels/ContentListViewModel/ContentListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "getContent()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
