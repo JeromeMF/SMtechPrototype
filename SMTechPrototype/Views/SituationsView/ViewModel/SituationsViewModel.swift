@@ -1,8 +1,8 @@
 //
-//  ContentListViewModel.swift
+//  SituationsViewModel.swift
 //  SMTechPrototype
 //
-//  Created by Jérôme Figueiredo on 27/01/2023.
+//  Created by Jérôme Figueiredo on 01/02/2023.
 //
 
 import Foundation
@@ -10,18 +10,19 @@ import SwiftUI
 import Contentful
 import Combine
 
-class ContentListViewModel: ObservableObject {
+class SituationsViewModel: ObservableObject {
     
     // MARK: - Properties
     private var name: String = ""
     private var description: String = ""
     private var speaker: String = ""
-    private var situations: [String] = []
+//    private var situations: [String] = []
     private var topics: [String] = []
     private var fileName: String = ""
     private var fileUrl: URL = URL(string: "empty")!
     
     @Published var contentArr: [ContentModel] = []
+    @Published var situationsArr: [SituationModel] = []
     
     // MARK: - Methods
     func getContent() {
@@ -32,12 +33,18 @@ class ContentListViewModel: ObservableObject {
         let query = Query.where(contentTypeId: "audio")
         
         client.fetchArray(of: Entry.self, matching: query) { result in
+            var tempArr: [SituationModel] = []
             switch result {
             case .success(let array):
-                //                self.resultArr = array.items
                 array.items.forEach { entry in
                     
-                    self.name = entry.fields["name"] as! String
+                    if let name = entry.fields["name"] as? String {
+                        self.name = name
+                    }
+                    
+                    if let description = entry.fields["description"] as? String {
+                        self.description = description
+                    }
                     
                     if let speaker = entry.fields.linkedEntry(at: "speaker") {
                         if let speakerName = speaker.fields["name"]  {
@@ -47,11 +54,26 @@ class ContentListViewModel: ObservableObject {
                     
                     if let situations = entry.fields.linkedEntries(at: "situations") {
                         for situation in situations {
-                            self.situations.append(situation.fields["name"] as! String)
-                            print("✅ \(self.situations)")
+//                            self.situations.append(situation.fields["name"] as! String)
+//                            self.situationsArr.append(SituationsMapping(rawValue: situation.fields["name"] as! String)!)
+                            if let sitName = situation.fields["name"] as? String {
+                                var tempSituation = SituationModel(name: sitName)
+                                
+                                tempArr.append(tempSituation)
+//                                DispatchQueue.main.async {
+//                                    self.situationsArr.append(tempSituation)
+//                                }
+                            }
                         }
                         
                     }
+                    
+                    DispatchQueue.main.async {
+                        self.situationsArr = tempArr.removingDuplicates()
+                    }
+
+                    print("✅ \(self.situationsArr)")
+
                     
 //                    if let packages = entry.fields.linkedEntry(at: "package") {
 //                        print(packages.fields)
@@ -84,9 +106,6 @@ class ContentListViewModel: ObservableObject {
                         self.contentArr.append(tempContent)
                     }
                 }
-                
-                print("🚨 \(self.contentArr)")
-                
             case .failure(let error):
                 print("Oh no something went wrong: \(error)")
             }

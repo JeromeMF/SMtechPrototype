@@ -11,7 +11,7 @@ import SwiftUI
 struct SMTechPrototypeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentListView()
+            SituationsView()
         }
     }
 }

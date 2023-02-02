@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02385BEE298AFAEB00BCEB75 /* SituationsMaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02385BED298AFAEB00BCEB75 /* SituationsMaping.swift */; };
+		02385BF1298AFD0A00BCEB75 /* SituationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02385BF0298AFD0A00BCEB75 /* SituationsViewModel.swift */; };
+		02385BF3298C039C00BCEB75 /* SituationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02385BF2298C039C00BCEB75 /* SituationModel.swift */; };
+		02385BF5298C05AA00BCEB75 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02385BF4298C05AA00BCEB75 /* ArrayExtension.swift */; };
 		0238C29429882EB400174A02 /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238C29329882EB400174A02 /* AudioModel.swift */; };
 		0238C29E298A5FB700174A02 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238C29D298A5FB700174A02 /* ContentModel.swift */; };
 		0238C2A1298AF0E400174A02 /* SituationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238C2A0298AF0E400174A02 /* SituationsView.swift */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02385BED298AFAEB00BCEB75 /* SituationsMaping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationsMaping.swift; sourceTree = "<group>"; };
+		02385BF0298AFD0A00BCEB75 /* SituationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationsViewModel.swift; sourceTree = "<group>"; };
+		02385BF2298C039C00BCEB75 /* SituationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationModel.swift; sourceTree = "<group>"; };
+		02385BF4298C05AA00BCEB75 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		0238C29329882EB400174A02 /* AudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
 		0238C29D298A5FB700174A02 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		0238C2A0298AF0E400174A02 /* SituationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationsView.swift; sourceTree = "<group>"; };
@@ -52,10 +60,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02385BEF298AFCF500BCEB75 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				02385BF0298AFD0A00BCEB75 /* SituationsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		0238C29F298AF0D200174A02 /* SituationsView */ = {
 			isa = PBXGroup;
 			children = (
 				0238C2A0298AF0E400174A02 /* SituationsView.swift */,
+				02385BEF298AFCF500BCEB75 /* ViewModel */,
 			);
 			path = SituationsView;
 			sourceTree = "<group>";
@@ -86,7 +103,6 @@
 				028EED722983ED9A00385273 /* SupportingFiles */,
 				028EED712983ED9500385273 /* Utils */,
 				028EED702983ED8700385273 /* Views */,
-				028EED6F2983EB4900385273 /* ViewModels */,
 				028EED672983EA3D00385273 /* Preview Content */,
 			);
 			path = SMTechPrototype;
@@ -98,14 +114,6 @@
 				028EED682983EA3D00385273 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		028EED6F2983EB4900385273 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				028EED7C2983F00700385273 /* ContentListViewModel */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		028EED702983ED8700385273 /* Views */ = {
@@ -121,6 +129,7 @@
 		028EED712983ED9500385273 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				02385BED298AFAEB00BCEB75 /* SituationsMaping.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -155,6 +164,7 @@
 			children = (
 				0238C29329882EB400174A02 /* AudioModel.swift */,
 				0238C29D298A5FB700174A02 /* ContentModel.swift */,
+				02385BF2298C039C00BCEB75 /* SituationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				028EED842984453900385273 /* ColorExtension.swift */,
+				02385BF4298C05AA00BCEB75 /* ArrayExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -171,16 +182,17 @@
 			isa = PBXGroup;
 			children = (
 				028EED7A2983EFE400385273 /* ContentListView.swift */,
+				028EED7C2983F00700385273 /* ViewModel */,
 			);
 			path = ContentListView;
 			sourceTree = "<group>";
 		};
-		028EED7C2983F00700385273 /* ContentListViewModel */ = {
+		028EED7C2983F00700385273 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				028EED7D2983F08900385273 /* ContentListViewModel.swift */,
 			);
-			path = ContentListViewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		028EED7F2983F2A200385273 /* CardView */ = {
@@ -270,15 +282,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0238C29429882EB400174A02 /* AudioModel.swift in Sources */,
+				02385BEE298AFAEB00BCEB75 /* SituationsMaping.swift in Sources */,
 				0238C2A1298AF0E400174A02 /* SituationsView.swift in Sources */,
 				028EED7E2983F08900385273 /* ContentListViewModel.swift in Sources */,
 				028EED642983EA3C00385273 /* ContentView.swift in Sources */,
 				0238C29E298A5FB700174A02 /* ContentModel.swift in Sources */,
 				028EED622983EA3C00385273 /* SMTechPrototypeApp.swift in Sources */,
+				02385BF3298C039C00BCEB75 /* SituationModel.swift in Sources */,
 				028EED7B2983EFE400385273 /* ContentListView.swift in Sources */,
 				028EED812983F33E00385273 /* CardView.swift in Sources */,
 				028EED8D29844DB400385273 /* ContenfulAPI.swift in Sources */,
+				02385BF5298C05AA00BCEB75 /* ArrayExtension.swift in Sources */,
 				028EED852984453900385273 /* ColorExtension.swift in Sources */,
+				02385BF1298AFD0A00BCEB75 /* SituationsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

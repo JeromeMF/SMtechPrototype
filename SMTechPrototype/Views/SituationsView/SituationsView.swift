@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SituationsView: View {
+    // MARK: - Properties
+    @ObservedObject var viewModel = SituationsViewModel()
     
     // MARK: - Body
     var body: some View {
@@ -19,6 +21,72 @@ struct SituationsView: View {
                     Text("How can we help you today?")
                         .font(.largeTitle)
                     
+                    ForEach(viewModel.situationsArr, id:\.self) { situation in
+                        Button(action: {
+                            
+                        }, label: {
+                            HStack() {
+                                Spacer()
+                                Text(situation.name)
+                                Spacer()
+                            }
+                            .frame(height: 100)
+                            .background(Color.gray)
+                            .foregroundColor(.white)
+                            //                        .border(Color.gray)
+                            .cornerRadius(10)
+                            
+                        })
+                        
+                    }
+                    
+//                    Button(action: {
+//
+//                    }, label: {
+//                        HStack() {
+//                            Spacer()
+//                            Text(SituationsMapping.preparingToSleep.rawValue)
+//                            Spacer()
+//                        }
+//                        .frame(height: 100)
+//                        .background(Color.gray)
+//                        .foregroundColor(.white)
+//                        //                        .border(Color.gray)
+//                        .cornerRadius(10)
+//
+//                    })
+//
+//                    Button(action: {
+//
+//                    }, label: {
+//                        HStack() {
+//                            Spacer()
+//                            Text(SituationsMapping.fallingBackToSleep.rawValue)
+//                            Spacer()
+//                        }
+//                        .frame(height: 100)
+//                        .background(Color.gray)
+//                        .foregroundColor(.white)
+//                        //                        .border(Color.gray)
+//                        .cornerRadius(10)
+//
+//                    })
+//
+//                    Button(action: {
+//
+//                    }, label: {
+//                        HStack(){
+//                            Spacer()
+//                            Text(SituationsMapping.wakingUp.rawValue)
+//                            Spacer()
+//                        }
+//                        .frame(height: 100)
+//                        .background(Color.gray)
+//                        .foregroundColor(.white)
+//                        //                        .border(Color.gray)
+//                        .cornerRadius(10)
+//                    })
+                    
                     Spacer()
                 }//: VStack
                 .padding(.top, 70)
@@ -26,6 +94,9 @@ struct SituationsView: View {
             }//: HStack
             .padding(.horizontal, 24)
         }//: ZStack
+        .onAppear() {
+            viewModel.getContent()
+        }
     }
 }
 
