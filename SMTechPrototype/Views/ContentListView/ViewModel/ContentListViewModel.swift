@@ -98,4 +98,11 @@ class ContentListViewModel: ObservableObject {
             }
         }
     }
+    
+    func updateContent(contentArr: [ContentModel], situation: SituationModel) {
+        DispatchQueue.main.async {
+            self.contentArr = contentArr.filter { $0.situations.contains(situation) }
+
+        }
+    }
 }

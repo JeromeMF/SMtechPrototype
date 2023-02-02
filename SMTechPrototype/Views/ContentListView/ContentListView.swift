@@ -13,26 +13,31 @@ struct ContentListView: View {
     
     @ObservedObject var viewModel = ContentListViewModel()
     
-    var situationTitle: String
+    var situation: SituationModel
+    var content: [ContentModel]
+    
     private var gridLayout = [GridItem(), GridItem()]
     
-    init(situationTitle: String) {
-        self.situationTitle = situationTitle
+    init(content: [ContentModel], situation: SituationModel) {
+        self.content = content
+        self.situation = situation
     }
     
     // MARK: - Body
     var body: some View {
         ZStack() {
             NavigationStack {
-                VStack(spacing: 0) {
+                
+//                VStack(spacing: 0) {
                     HStack() {
                         Image(systemName: "arrow.left")
-                            .padding(.trailing, 20)
-                        Text(situationTitle)
+                            .padding(.horizontal, 20)
+                        Text(situation.name)
                             .font(.title)
                         Spacer()
                     }
-                    .padding(.vertical, 40)
+//                    .background(Color.gray.opacity(0.5))
+                    .padding(.top, 40)
                     .onTapGesture {
                         self.presentationMode.wrappedValue.dismiss()
                     }
@@ -43,19 +48,18 @@ struct ContentListView: View {
                                 CardView(content: result)
                             }//: ForEach
                         }//: LazyVGrid
-                        //                        .padding(.horizontal, 24)
                     }//: Scrollview
                     .scrollIndicators(.hidden)
-                    //                    .navigationTitle("Content")
-                }//: NavigationStack
+//                }//: VStack
                 .padding(.horizontal, 24)
-            }//: VStack
+                
+            }//: NavigationStack
             
         }//: ZStack
         .navigationBarHidden(true)
         .toolbarBackground(.hidden, for: .navigationBar)
-        .onAppear() {
-            viewModel.getContent()
+        .task {
+            viewModel.updateContent(contentArr: content, situation: situation)
             //            Task {
             //                await viewModel.getRoutines()
             //            }//: Task
@@ -63,12 +67,12 @@ struct ContentListView: View {
     }
 }
 
-struct ContentListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentListView(
-            situationTitle: "Teste"
-        )
-        .previewLayout(.sizeThatFits)
-        .padding()
-    }
-}
+//struct ContentListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentListView(
+//            situationTitle: "Teste"
+//        )
+//        .previewLayout(.sizeThatFits)
+//        .padding()
+//    }
+//}

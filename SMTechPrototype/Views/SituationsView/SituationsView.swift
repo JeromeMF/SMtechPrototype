@@ -22,8 +22,8 @@ struct SituationsView: View {
                         Text("How can we help you today?")
                             .font(.largeTitle)
                         
-                        ForEach(viewModel.situationsArr, id:\.self) { situation in
-                            NavigationLink(destination: ContentListView(situationTitle: situation.name),
+                        ForEach(viewModel.situationsArray, id:\.self) { situation in
+                            NavigationLink(destination: ContentListView(content: viewModel.contentArray, situation: situation),
                                            label: {
                                 HStack() {
                                     Spacer()
@@ -45,7 +45,7 @@ struct SituationsView: View {
                 .padding(.horizontal, 24)
             }
         }//: ZStack
-        .onAppear() {
+        .task {
             viewModel.getContent()
         }
     }

@@ -30,10 +30,234 @@
             filePath = "SMTechPrototype/Views/SituationsView/ViewModel/SituationsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "getContent()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55B49177-61FC-4A1B-BFF2-CC2447E607E4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMTechPrototype/Views/SituationsView/SituationsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "55B49177-61FC-4A1B-BFF2-CC2447E607E4 - d741efc91f189d1a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;SMTechPrototype.SituationModel&gt;, SMTechPrototype.SituationModel, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0, SMTechPrototype.ContentListView&gt;&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.NavigationStack&lt;SwiftUI.NavigationPath, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt; in SMTechPrototype.SituationsView.body.getter : some"
+                  moduleName = "SMTechPrototype"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jerome/Projects/7mind/SMTechPrototype/SMTechPrototype/Views/SituationsView/SituationsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "1084">
+               </Location>
+               <Location
+                  uuid = "55B49177-61FC-4A1B-BFF2-CC2447E607E4 - 11ecb86110b61134"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SMTechPrototype.SituationModel) -&gt; SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0, SMTechPrototype.ContentListView&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;SMTechPrototype.SituationModel&gt;, SMTechPrototype.SituationModel, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0, SMTechPrototype.ContentListView&gt;&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.NavigationStack&lt;SwiftUI.NavigationPath, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt; in SMTechPrototype.SituationsView.body.getter : some"
+                  moduleName = "SMTechPrototype"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jerome/Projects/7mind/SMTechPrototype/SMTechPrototype/Views/SituationsView/SituationsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "264">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A9EAF343-F50E-4100-8BA6-1E1E9444800C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMTechPrototype/Views/SituationsView/ViewModel/SituationsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "getContent()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F8C0146-EAA6-4501-BD8C-1045FAE82D6F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMTechPrototype/Views/SituationsView/ViewModel/SituationsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "getContent()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E2B77BE-6165-4FA8-A949-03C5ECDED533"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMTechPrototype/Views/SituationsView/ViewModel/SituationsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "getContent()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1E2B77BE-6165-4FA8-A949-03C5ECDED533 - 519e74dcb45098fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Contentful.Entry) -&gt; () in closure #1 (Swift.Result&lt;Contentful.HomogeneousArrayResponse&lt;Contentful.Entry&gt;, Swift.Error&gt;) -&gt; () in SMTechPrototype.SituationsViewModel.getContent() -&gt; ()"
+                  moduleName = "SMTechPrototype"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jerome/Projects/7mind/SMTechPrototype/SMTechPrototype/Views/SituationsView/ViewModel/SituationsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "2424">
+               </Location>
+               <Location
+                  uuid = "1E2B77BE-6165-4FA8-A949-03C5ECDED533 - 519e74dcb45098fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Contentful.Entry) -&gt; () in closure #1 (Swift.Result&lt;Contentful.HomogeneousArrayResponse&lt;Contentful.Entry&gt;, Swift.Error&gt;) -&gt; () in SMTechPrototype.SituationsViewModel.getContent() -&gt; ()"
+                  moduleName = "SMTechPrototype"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jerome/Projects/7mind/SMTechPrototype/SMTechPrototype/Views/SituationsView/ViewModel/SituationsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "2740">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EBEE10F2-49DC-4C76-AB19-F8157B2936F9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMTechPrototype/Views/SituationsView/ViewModel/SituationsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "getContent()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0ECD34F-AFE2-45C6-93D8-6E8F48BF7152"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMTechPrototype/Views/SituationsView/ViewModel/SituationsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "getContent()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F1FD560-FAAA-4E1B-ACF0-FC88C6FDFD39"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMTechPrototype/Views/SituationsView/ViewModel/SituationsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "getContent()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "921423E1-0E2C-475F-983D-9BEFBDFBAE59"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMTechPrototype/Views/ContentListView/ViewModel/ContentListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "updateContent(contentArr:situation:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "921423E1-0E2C-475F-983D-9BEFBDFBAE59 - 1d022cb25b0b154c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in SMTechPrototype.ContentListViewModel.updateContent(contentArr: Swift.Array&lt;SMTechPrototype.ContentModel&gt;, situation: SMTechPrototype.SituationModel) -&gt; ()"
+                  moduleName = "SMTechPrototype"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jerome/Projects/7mind/SMTechPrototype/SMTechPrototype/Views/ContentListView/ViewModel/ContentListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "921423E1-0E2C-475F-983D-9BEFBDFBAE59 - 2aba45df3a2beafb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SMTechPrototype.ContentModel) -&gt; Swift.Bool in closure #1 @Swift.MainActor () -&gt; () in SMTechPrototype.ContentListViewModel.updateContent(contentArr: Swift.Array&lt;SMTechPrototype.ContentModel&gt;, situation: SMTechPrototype.SituationModel) -&gt; ()"
+                  moduleName = "SMTechPrototype"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jerome/Projects/7mind/SMTechPrototype/SMTechPrototype/Views/ContentListView/ViewModel/ContentListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

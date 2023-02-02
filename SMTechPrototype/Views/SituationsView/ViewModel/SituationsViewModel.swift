@@ -16,13 +16,13 @@ class SituationsViewModel: ObservableObject {
     private var name: String = ""
     private var description: String = ""
     private var speaker: String = ""
-//    private var situations: [String] = []
+    //    private var situations: [String] = []
     private var topics: [String] = []
     private var fileName: String = ""
     private var fileUrl: URL = URL(string: "empty")!
     
-    @Published var contentArr: [ContentModel] = []
-    @Published var situationsArr: [SituationModel] = []
+    @Published var contentArray: [ContentModel] = []
+    @Published var situationsArray: [SituationModel] = []
     
     // MARK: - Methods
     func getContent() {
@@ -32,8 +32,10 @@ class SituationsViewModel: ObservableObject {
         
         let query = Query.where(contentTypeId: "audio")
         
+        var tempArr: [SituationModel] = []
+        
         client.fetchArray(of: Entry.self, matching: query) { result in
-            var tempArr: [SituationModel] = []
+            
             switch result {
             case .success(let array):
                 array.items.forEach { entry in
@@ -54,35 +56,31 @@ class SituationsViewModel: ObservableObject {
                     
                     if let situations = entry.fields.linkedEntries(at: "situations") {
                         for situation in situations {
-//                            self.situations.append(situation.fields["name"] as! String)
-//                            self.situationsArr.append(SituationsMapping(rawValue: situation.fields["name"] as! String)!)
                             if let sitName = situation.fields["name"] as? String {
-                                var tempSituation = SituationModel(name: sitName)
+                                let tempSituation = SituationModel(name: sitName)
                                 
                                 tempArr.append(tempSituation)
-//                                DispatchQueue.main.async {
-//                                    self.situationsArr.append(tempSituation)
-//                                }
                             }
                         }
                         
                     }
                     
-                    DispatchQueue.main.async {
-                        self.situationsArr = tempArr.removingDuplicates()
-                    }
-
-                    print("✅ \(self.situationsArr)")
-
-                    
-//                    if let packages = entry.fields.linkedEntry(at: "package") {
-//                        print(packages.fields)
+//                    DispatchQueue.main.async {
+//                        self.situationsArr = tempArr.removingDuplicates()
+//                        print("✅ \(self.situationsArr)")
 //                    }
+                    
+//                    print("✅ \(self.situationsArr)")
+                    
+                    //                    if let packages = entry.fields.linkedEntry(at: "package") {
+                    //                        print(packages.fields)
+                    //                    }
                     
                     //                    if let topics = entry.fields.linkedEntries(at: "topics") {
                     //                        DispatchQueue.main.async {
                     //                        }
                     //                    }
+                    
                     if let file = entry.fields.linkedAsset(at: "file") {
                         self.fileName = file.title ?? ""
                         
@@ -95,20 +93,29 @@ class SituationsViewModel: ObservableObject {
                                                    name: self.name,
                                                    description: "",
                                                    speaker: self.speaker,
-                                                   situations: [],
+                                                   situations: self.situationsArray,
                                                    topics: [],
                                                    fileTitle: self.fileName,
                                                    fileUrl: self.fileUrl)
                     
-                    print("🚨 \(tempContent.situations)")
                     
                     DispatchQueue.main.async {
-                        self.contentArr.append(tempContent)
+                        self.situationsArray = tempArr.removingDuplicates()
+                        self.contentArray.append(tempContent)
+                        print("✅ \(self.situationsArray)")
+                        print("🚨 \(self.contentArray)")
                     }
+                    
+//                    DispatchQueue.main.async {
+//                        self.contentArray.append(tempContent)
+//                        
+//                    }
                 }
             case .failure(let error):
                 print("Oh no something went wrong: \(error)")
             }
+            
+            
         }
     }
 }

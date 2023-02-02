@@ -12,7 +12,7 @@ struct ContentModel: Identifiable, Hashable {
     var name: String
     var description: String
     var speaker: String
-    var situations: [String]
+    var situations: [SituationModel]
     var topics: [String]
     var fileTitle: String
     var fileUrl: URL
