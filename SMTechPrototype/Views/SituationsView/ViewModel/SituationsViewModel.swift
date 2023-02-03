@@ -16,7 +16,6 @@ class SituationsViewModel: ObservableObject {
     private var name: String = ""
     private var description: String = ""
     private var speaker: String = ""
-    //    private var situations: [String] = []
     private var topics: [String] = []
     private var fileName: String = ""
     private var fileUrl: URL = URL(string: "empty")!
@@ -33,6 +32,7 @@ class SituationsViewModel: ObservableObject {
         let query = Query.where(contentTypeId: "audio")
         
         var tempArr: [SituationModel] = []
+        var tempArr2: [SituationModel] = []
         
         client.fetchArray(of: Entry.self, matching: query) { result in
             
@@ -55,23 +55,14 @@ class SituationsViewModel: ObservableObject {
                     }
                     
                     if let situations = entry.fields.linkedEntries(at: "situations") {
-                        for situation in situations {
-                            if let sitName = situation.fields["name"] as? String {
-                                let tempSituation = SituationModel(name: sitName)
-                                
-                                tempArr.append(tempSituation)
+                        situations.forEach { entry in
+                            if let sitName = entry.fields["name"] as? String {
+                                tempArr.append(SituationModel(name: sitName))
+                                tempArr2.append(SituationModel(name: sitName))
                             }
                         }
-                        
                     }
-                    
-//                    DispatchQueue.main.async {
-//                        self.situationsArr = tempArr.removingDuplicates()
-//                        print("✅ \(self.situationsArr)")
-//                    }
-                    
-//                    print("✅ \(self.situationsArr)")
-                    
+                                        
                     //                    if let packages = entry.fields.linkedEntry(at: "package") {
                     //                        print(packages.fields)
                     //                    }
@@ -93,29 +84,25 @@ class SituationsViewModel: ObservableObject {
                                                    name: self.name,
                                                    description: "",
                                                    speaker: self.speaker,
-                                                   situations: self.situationsArray,
+                                                   situations: tempArr,
                                                    topics: [],
                                                    fileTitle: self.fileName,
                                                    fileUrl: self.fileUrl)
                     
                     
                     DispatchQueue.main.async {
-                        self.situationsArray = tempArr.removingDuplicates()
+                        self.situationsArray = tempArr2.removingDuplicates()
                         self.contentArray.append(tempContent)
-                        print("✅ \(self.situationsArray)")
-                        print("🚨 \(self.contentArray)")
+//                        print("✅ \(self.situationsArray)")
+//                        print("🔥 \(tempContent.situations) \(tempContent.situations.count)")
+//                        print("🚨 \(self.contentArray)")
                     }
                     
-//                    DispatchQueue.main.async {
-//                        self.contentArray.append(tempContent)
-//                        
-//                    }
+                    tempArr.removeAll()
                 }
             case .failure(let error):
                 print("Oh no something went wrong: \(error)")
             }
-            
-            
         }
     }
 }

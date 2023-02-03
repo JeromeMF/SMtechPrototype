@@ -13,8 +13,11 @@ struct ContentListView: View {
     
     @ObservedObject var viewModel = ContentListViewModel()
     
+    @State private var showingPlayer = false
+    
     var situation: SituationModel
     var content: [ContentModel]
+//    var selectedContent: ContentModel
     
     private var gridLayout = [GridItem(), GridItem()]
     
@@ -28,29 +31,35 @@ struct ContentListView: View {
         ZStack() {
             NavigationStack {
                 
-//                VStack(spacing: 0) {
-                    HStack() {
-                        Image(systemName: "arrow.left")
-                            .padding(.horizontal, 20)
-                        Text(situation.name)
-                            .font(.title)
-                        Spacer()
-                    }
-//                    .background(Color.gray.opacity(0.5))
-                    .padding(.top, 40)
-                    .onTapGesture {
-                        self.presentationMode.wrappedValue.dismiss()
-                    }
-                    
-                    ScrollView(.vertical) {
-                        LazyVGrid(columns: gridLayout, spacing: 8){
-                            ForEach(viewModel.contentArr, id: \.id) { result in
-                                CardView(content: result)
-                            }//: ForEach
-                        }//: LazyVGrid
-                    }//: Scrollview
-                    .scrollIndicators(.hidden)
-//                }//: VStack
+                //                VStack(spacing: 0) {
+                HStack() {
+                    Image(systemName: "arrow.left")
+                        .padding(.horizontal, 20)
+                    Text(situation.name)
+                        .font(.title)
+                    Spacer()
+                }
+                //                    .background(Color.gray.opacity(0.5))
+                .padding(.top, 40)
+                .onTapGesture {
+                    self.presentationMode.wrappedValue.dismiss()
+                }
+                
+                ScrollView(.vertical) {
+                    LazyVGrid(columns: gridLayout, spacing: 8){
+                        ForEach(viewModel.contentArr, id: \.id) { result in
+                            CardView(content: result)
+                                .onTapGesture {
+                                    showingPlayer.toggle()
+                                }
+                                .sheet(isPresented: $showingPlayer) {
+                                    PlayerView(content: result)
+                                }
+                        }//: ForEach
+                    }//: LazyVGrid
+                }//: Scrollview
+                .scrollIndicators(.hidden)
+                //                }//: VStack
                 .padding(.horizontal, 24)
                 
             }//: NavigationStack
@@ -60,10 +69,8 @@ struct ContentListView: View {
         .toolbarBackground(.hidden, for: .navigationBar)
         .task {
             viewModel.updateContent(contentArr: content, situation: situation)
-            //            Task {
-            //                await viewModel.getRoutines()
-            //            }//: Task
-        }//: OnAppear
+        }//: Task
+        
     }
 }
 

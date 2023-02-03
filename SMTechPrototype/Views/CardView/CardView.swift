@@ -19,7 +19,7 @@ struct CardView: View {
                     Text(content.name)
                         .fontWeight(.semibold)
                         .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-
+                    
                     Spacer()
                     
                     Image(systemName: "heart")
@@ -30,22 +30,23 @@ struct CardView: View {
                 
                 HStack(alignment: .bottom, spacing: 5) {
                     Image(systemName: "mic.fill")
-                        
+                    
                     Text(content.speaker)
                         .fontWeight(.medium)
                         .font(.system(size: 14))
-
+                        .font(.system(size: 14))
+                    
                     Spacer()
                     Text("7:15")
                         .font(.caption)
-                                        }
+                }
             }//: VStack
             .padding()
             .foregroundColor(.white)
         }//: HStack
         //        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 150, alignment: .leading)
         .frame(height: 200)
-        .background(Color.gray)
+        .background(Color.random.opacity(0.4))
         .cornerRadius(5.0)
         .shadow(color: Color.black.opacity(0.2), radius: 2, x: 0, y: 0)
         .padding(.vertical, 5)
@@ -56,13 +57,13 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView(content: ContentModel(id: UUID(),
-                                                 name: "This is a very long title that almost does not fit",
-                                                 description: "",
-                                                 speaker: "Mike",
-                                                 situations: [],
-                                                 topics: [],
-                                                 fileTitle: "HelixCrazy",
-                                                 fileUrl: URL(string: "helix")!))
+                                       name: "This is a very long title that almost does not fit",
+                                       description: "",
+                                       speaker: "Mike",
+                                       situations: [],
+                                       topics: [],
+                                       fileTitle: "HelixCrazy",
+                                       fileUrl: URL(string: "helix")!))
         .previewLayout(.sizeThatFits)
         .frame(width: 160)
         .padding()

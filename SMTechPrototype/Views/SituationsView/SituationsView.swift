@@ -28,6 +28,7 @@ struct SituationsView: View {
                                 HStack() {
                                     Spacer()
                                     Text(situation.name)
+                                        .font(.title3)
                                     Spacer()
                                 }
                                 .frame(height: 100)
