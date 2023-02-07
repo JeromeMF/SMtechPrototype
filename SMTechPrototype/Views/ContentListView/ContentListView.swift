@@ -63,33 +63,11 @@ struct ContentListView: View {
                                     Text(key)
                                         .font(.body)
                                         .fontWeight(.bold)
-                                        
+                                    
                                     Spacer()
                                 }//: HStack header
                                 .padding(.top)
                             })//: Section
-                            
-                            
-//                            Section(header: HStack {
-//                                Text(key)
-//                                    .font(.body)
-//                                    .fontWeight(.bold)
-//
-//                                Spacer()
-//                            }.padding(.top)
-//                                    , content: {
-//
-//                                ForEach(viewModel.contentDict[key]!) { content in
-//                                    CardView(content: content)
-//                                        .onTapGesture {
-//                                            content.premium ? showingAlert.toggle() : showingPlayer.toggle()
-//                                            logEvent("content-tapped", parameters: ["id": content.id, "name": content.name], type: .all)
-//                                        }
-//                                        .sheet(isPresented: $showingPlayer) {
-//                                            PlayerView(content: content)
-//                                        }
-//                                }
-//                            })
                         }
                     }//: LazyVGrid
                 }//: Scrollview
