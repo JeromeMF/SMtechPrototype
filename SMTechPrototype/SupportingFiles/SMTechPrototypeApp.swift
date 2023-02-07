@@ -7,15 +7,20 @@
 
 import SwiftUI
 import FirebaseCore
-
+import Firebase
+import AppboyKit
+import FirebaseAnalytics
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-
-    return true
-  }
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        Analytics.setAnalyticsCollectionEnabled(true) //d4eec9de-def4-4044-82f9-b04054923eb6
+        
+        Appboy.start(withApiKey: "d4eec9de-def4-4044-82f9-b04054923eb6", in:application, withLaunchOptions:launchOptions)
+        
+        return true
+    }
 }
 
 @main

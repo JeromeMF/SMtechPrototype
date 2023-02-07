@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import Firebase
+import AppboyKit
+import FirebaseAnalytics
 
 enum AnalyticsSystems: String, CaseIterable {
     case firebase
@@ -25,14 +28,26 @@ func logEvent(_ name: String, parameters: [String: Any] = [:], types: [Analytics
 func logEvent(_ name: String, parameters: [String: Any], type: AnalyticsSystems) {
     switch type {
     case .firebase:
-        //        Analytics.logEvent(name, parameters: parameters)
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+            AnalyticsParameterItemID: "id-\(name)",
+            AnalyticsParameterItemName: name,
+            AnalyticsParameterContentType: "cont",
+        ])
+        
         print("Firebase log event: \(name) \(type)")
     case .braze:
-        // Appboy.sharedInstance()?.logCustomEvent(name, withProperties: parameters)
+        Appboy.sharedInstance()?.logCustomEvent(name, withProperties: parameters)
         print("Braze log event: \(name) \(type)")
         break
         
     case .all:
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+            AnalyticsParameterItemID: "id-\(name)",
+            AnalyticsParameterItemName: name,
+            AnalyticsParameterContentType: "cont",
+        ])
+        
+        Appboy.sharedInstance()?.logCustomEvent(name, withProperties: parameters)
         print("All analytics log event: \(name) \(type)")
         break
     }

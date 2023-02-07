@@ -39,6 +39,7 @@
 		02B3B7B22991CBDD00141EC5 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 02B3B7B12991CBDD00141EC5 /* FirebaseCrashlytics */; };
 		02B3B7B42991CBDD00141EC5 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 02B3B7B32991CBDD00141EC5 /* FirebaseRemoteConfig */; };
 		02B3B7B62991CBDD00141EC5 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 02B3B7B52991CBDD00141EC5 /* FirebaseRemoteConfigSwift */; };
+		02B3B7B829927EF800141EC5 /* BrazeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B3B7B729927EF800141EC5 /* BrazeManager.swift */; };
 		02F132E4299145EA0094ADC3 /* Chargebee in Frameworks */ = {isa = PBXBuildFile; productRef = 02F132E3299145EA0094ADC3 /* Chargebee */; };
 		02F132E62991705A0094ADC3 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F132E52991705A0094ADC3 /* AnalyticsManager.swift */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,7 @@
 		02B3B79C29917CC900141EC5 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		02B3B7A129918D5600141EC5 /* TechniqueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniqueModel.swift; sourceTree = "<group>"; };
 		02B3B7AA2991CB6000141EC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		02B3B7B729927EF800141EC5 /* BrazeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrazeManager.swift; sourceTree = "<group>"; };
 		02F132E52991705A0094ADC3 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				02385BF6298D82F400BCEB75 /* Info.plist */,
+				02B3B7AA2991CB6000141EC5 /* GoogleService-Info.plist */,
 				028EED762983EDBD00385273 /* Extensions */,
 				028EED752983EDB000385273 /* Models */,
 				028EED742983EDA900385273 /* Resources */,
@@ -191,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				02F132E52991705A0094ADC3 /* AnalyticsManager.swift */,
+				02B3B7B729927EF800141EC5 /* BrazeManager.swift */,
 				02385C01298D883000BCEB75 /* Colors.swift */,
 				02385BED298AFAEB00BCEB75 /* SituationsMaping.swift */,
 			);
@@ -200,7 +204,6 @@
 		028EED722983ED9A00385273 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				02B3B7AA2991CB6000141EC5 /* GoogleService-Info.plist */,
 				028EED612983EA3C00385273 /* SMTechPrototypeApp.swift */,
 				028EED632983EA3C00385273 /* ContentView.swift */,
 			);
@@ -365,6 +368,7 @@
 				0238C2A1298AF0E400174A02 /* SituationsView.swift in Sources */,
 				02385BF9298D83B300BCEB75 /* PlayerView.swift in Sources */,
 				02385BFF298D87A300BCEB75 /* ProgressbarView.swift in Sources */,
+				02B3B7B829927EF800141EC5 /* BrazeManager.swift in Sources */,
 				028EED7E2983F08900385273 /* ContentListViewModel.swift in Sources */,
 				028EED642983EA3C00385273 /* ContentView.swift in Sources */,
 				0238C29E298A5FB700174A02 /* ContentModel.swift in Sources */,
@@ -522,6 +526,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = SMTechPrototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -557,6 +562,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = SMTechPrototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

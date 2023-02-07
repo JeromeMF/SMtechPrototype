@@ -49,7 +49,7 @@ struct ContentListView: View {
                             CardView(content: result)
                                 .onTapGesture {
                                     result.premium ? showingAlert.toggle() : showingPlayer.toggle()
-                                    logEvent("content-tapped", parameters: ["id": result.id, "name": result.name], type: .firebase)
+                                    logEvent("content-tapped", parameters: ["id": result.id, "name": result.name], type: .all)
                                 }
                                 .sheet(isPresented: $showingPlayer) {
                                     PlayerView(content: result)
