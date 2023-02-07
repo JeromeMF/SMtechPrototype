@@ -45,16 +45,52 @@ struct ContentListView: View {
                 
                 ScrollView(.vertical) {
                     LazyVGrid(columns: gridLayout, spacing: 8){
-                        ForEach(viewModel.contentArr, id: \.id) { result in
-                            CardView(content: result)
-                                .onTapGesture {
-                                    result.premium ? showingAlert.toggle() : showingPlayer.toggle()
-                                    logEvent("content-tapped", parameters: ["id": result.id, "name": result.name], type: .all)
-                                }
-                                .sheet(isPresented: $showingPlayer) {
-                                    PlayerView(content: result)
-                                }
-                        }//: ForEach
+                        
+                        ForEach(viewModel.contentDict.keys.sorted(), id: \.self) { key in
+                            Section(content: {
+                                ForEach(viewModel.contentDict[key]!) { content in
+                                    CardView(content: content)
+                                        .onTapGesture {
+                                            content.premium ? showingAlert.toggle() : showingPlayer.toggle()
+                                            logEvent("content-tapped", parameters: ["id": content.id, "name": content.name], type: .all)
+                                        }//: OnTapGesture
+                                        .sheet(isPresented: $showingPlayer) {
+                                            PlayerView(content: content)
+                                        }//: Sheet
+                                }//: ForEach
+                            }, header: {
+                                HStack {
+                                    Text(key)
+                                        .font(.body)
+                                        .fontWeight(.bold)
+                                        
+                                    Spacer()
+                                }//: HStack header
+                                .padding(.top)
+                            })//: Section
+                            
+                            
+//                            Section(header: HStack {
+//                                Text(key)
+//                                    .font(.body)
+//                                    .fontWeight(.bold)
+//
+//                                Spacer()
+//                            }.padding(.top)
+//                                    , content: {
+//
+//                                ForEach(viewModel.contentDict[key]!) { content in
+//                                    CardView(content: content)
+//                                        .onTapGesture {
+//                                            content.premium ? showingAlert.toggle() : showingPlayer.toggle()
+//                                            logEvent("content-tapped", parameters: ["id": content.id, "name": content.name], type: .all)
+//                                        }
+//                                        .sheet(isPresented: $showingPlayer) {
+//                                            PlayerView(content: content)
+//                                        }
+//                                }
+//                            })
+                        }
                     }//: LazyVGrid
                 }//: Scrollview
                 .scrollIndicators(.hidden)
