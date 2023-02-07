@@ -30,11 +30,14 @@ struct SituationsView: View {
                                     Text(situation.name)
                                         .font(.title3)
                                     Spacer()
-                                }
+                                }//: HStack - Situation
                                 .frame(height: 100)
                                 .background(Color.gray)
                                 .foregroundColor(.white)
                                 .cornerRadius(10)
+                            })//: NavigationLink
+                            .simultaneousGesture(TapGesture().onEnded {
+                                logEvent("situation-tapped", parameters: ["situation-name": situation.name], type: .all)
                             })
                         }//: ForEach
                         

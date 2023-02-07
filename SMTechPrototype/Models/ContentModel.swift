@@ -14,6 +14,8 @@ struct ContentModel: Identifiable, Hashable {
     var speaker: String
     var situations: [SituationModel]
     var topics: [String]
+    var techniques: [TechniqueModel]
     var fileTitle: String
     var fileUrl: URL
+    var premium: Bool
 }

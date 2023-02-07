@@ -22,8 +22,12 @@ struct CardView: View {
                     
                     Spacer()
                     
-                    Image(systemName: "heart")
-                    
+                    Image(systemName: "lock")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 15)
+                        .hidden(!content.premium)
+                        .offset(y: 5)
                 }//: HStack
                 
                 Spacer()
@@ -44,7 +48,6 @@ struct CardView: View {
             .padding()
             .foregroundColor(.white)
         }//: HStack
-        //        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 150, alignment: .leading)
         .frame(height: 200)
         .background(Color.random.opacity(0.4))
         .cornerRadius(5.0)
@@ -62,8 +65,10 @@ struct CardView_Previews: PreviewProvider {
                                        speaker: "Mike",
                                        situations: [],
                                        topics: [],
+                                       techniques: [],
                                        fileTitle: "HelixCrazy",
-                                       fileUrl: URL(string: "helix")!))
+                                       fileUrl: URL(string: "helix")!,
+                                       premium: true))
         .previewLayout(.sizeThatFits)
         .frame(width: 160)
         .padding()

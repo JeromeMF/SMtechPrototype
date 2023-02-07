@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct PlayerView: View {
+    // MARK: - Properties
+    
     @Namespace private var playerAnimation
+    
+    @ObservedObject var viewModel: PlayerViewModel = PlayerViewModel()
     @State private var showsDetails = true
     @State private var showsControls = true
     @State var flipped: Bool = false
@@ -20,6 +24,7 @@ struct PlayerView: View {
         showsDetails ? 300 : 75
     }
 
+    // MARK: - Body
     var body: some View {
         ZStack {
             CardView(content: content)
@@ -30,7 +35,6 @@ struct PlayerView: View {
 
                 VStack {
                     HStack {
-    //                    CardView(content: ContentModel(id: UUID(), name: "Test", description: "", speaker: "Sascha", situations: [], topics: [], fileTitle: "Yo", fileUrl: URL(string: "s")!))
                         Image("cover")
                             .resizable()
                             .frame(width: frame, height: frame)
@@ -58,7 +62,7 @@ struct PlayerView: View {
 
                             Spacer()
 
-                            Image(systemName: "play.fill")
+                            Image(systemName: "pause.fill")
                                 .font(.system(size: 30))
                                 .foregroundColor(.white)
                                 .padding()
@@ -97,7 +101,7 @@ struct PlayerView: View {
     //                                .foregroundColor(.white)
     //                                .padding()
 
-                                Image(systemName: "play.circle.fill")
+                                Image(systemName:  "play.circle.fill")
                                     .font(.system(size: 50))
                                     .foregroundColor(.white)
                                     .padding()
@@ -108,12 +112,13 @@ struct PlayerView: View {
     //                                .padding()
                             }
                         }.opacity(showsControls ? 1 : 0)
-    //                    .animation(.easeIn)
                         Spacer()
                     }
                 }
                 .onTapGesture {
                     showsControls.toggle()
+                    showsControls ? viewModel.pause() : viewModel.play()
+                    
                     Timer.scheduledTimer(withTimeInterval: 0.15, repeats: false) { timer in
                         withAnimation(.spring()) {
                             self.showsDetails.toggle()
@@ -126,6 +131,9 @@ struct PlayerView: View {
             }
         }//: ZStack
         .background(.black)
+        .onAppear {
+            viewModel.initPlayer(url: content.fileUrl)
+        }
     }
 }
 
@@ -149,7 +157,9 @@ struct PlayerView_Previews: PreviewProvider {
                                          speaker: "Mike",
                                          situations: [],
                                          topics: [],
+                                         techniques: [],
                                          fileTitle: "HelixCrazy",
-                                         fileUrl: URL(string: "helix")!))
+                                         fileUrl: URL(string: "helix")!,
+                                         premium: false))
     }
 }

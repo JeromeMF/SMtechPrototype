@@ -30,7 +30,7 @@ struct ProgressBarView: View {
                 Rectangle()
                     .fill(barColor)
                     .frame(width: min(geo.size.width, geo.size.width * progress))
-                    .animation(.linear)
+                    .animation(.linear, value: 1)
             }.cornerRadius(25.0)
         }
     }

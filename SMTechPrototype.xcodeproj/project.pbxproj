@@ -16,7 +16,6 @@
 		02385BFF298D87A300BCEB75 /* ProgressbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02385BFE298D87A300BCEB75 /* ProgressbarView.swift */; };
 		02385C02298D883000BCEB75 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02385C01298D883000BCEB75 /* Colors.swift */; };
 		02385C04298D886C00BCEB75 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02385C03298D886C00BCEB75 /* UIScreenExtension.swift */; };
-		0238C29429882EB400174A02 /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238C29329882EB400174A02 /* AudioModel.swift */; };
 		0238C29E298A5FB700174A02 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238C29D298A5FB700174A02 /* ContentModel.swift */; };
 		0238C2A1298AF0E400174A02 /* SituationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238C2A0298AF0E400174A02 /* SituationsView.swift */; };
 		028EED622983EA3C00385273 /* SMTechPrototypeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028EED612983EA3C00385273 /* SMTechPrototypeApp.swift */; };
@@ -29,7 +28,19 @@
 		028EED852984453900385273 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028EED842984453900385273 /* ColorExtension.swift */; };
 		028EED882984474400385273 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 028EED872984474400385273 /* Apollo */; };
 		028EED8B29844D5600385273 /* Contentful in Frameworks */ = {isa = PBXBuildFile; productRef = 028EED8A29844D5600385273 /* Contentful */; };
-		028EED8D29844DB400385273 /* ContenfulAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028EED8C29844DB400385273 /* ContenfulAPI.swift */; };
+		02B3B79D29917CC900141EC5 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B3B79C29917CC900141EC5 /* ViewExtension.swift */; };
+		02B3B7A229918D5600141EC5 /* TechniqueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B3B7A129918D5600141EC5 /* TechniqueModel.swift */; };
+		02B3B7A52991CB0600141EC5 /* AppboyKit in Frameworks */ = {isa = PBXBuildFile; productRef = 02B3B7A42991CB0600141EC5 /* AppboyKit */; };
+		02B3B7A72991CB0600141EC5 /* AppboyPushStory in Frameworks */ = {isa = PBXBuildFile; productRef = 02B3B7A62991CB0600141EC5 /* AppboyPushStory */; };
+		02B3B7A92991CB0600141EC5 /* AppboyUI in Frameworks */ = {isa = PBXBuildFile; productRef = 02B3B7A82991CB0600141EC5 /* AppboyUI */; };
+		02B3B7AB2991CB6000141EC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B7AA2991CB6000141EC5 /* GoogleService-Info.plist */; };
+		02B3B7AE2991CBDD00141EC5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 02B3B7AD2991CBDD00141EC5 /* FirebaseAnalytics */; };
+		02B3B7B02991CBDD00141EC5 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 02B3B7AF2991CBDD00141EC5 /* FirebaseAnalyticsSwift */; };
+		02B3B7B22991CBDD00141EC5 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 02B3B7B12991CBDD00141EC5 /* FirebaseCrashlytics */; };
+		02B3B7B42991CBDD00141EC5 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 02B3B7B32991CBDD00141EC5 /* FirebaseRemoteConfig */; };
+		02B3B7B62991CBDD00141EC5 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 02B3B7B52991CBDD00141EC5 /* FirebaseRemoteConfigSwift */; };
+		02F132E4299145EA0094ADC3 /* Chargebee in Frameworks */ = {isa = PBXBuildFile; productRef = 02F132E3299145EA0094ADC3 /* Chargebee */; };
+		02F132E62991705A0094ADC3 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F132E52991705A0094ADC3 /* AnalyticsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +54,6 @@
 		02385BFE298D87A300BCEB75 /* ProgressbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressbarView.swift; sourceTree = "<group>"; };
 		02385C01298D883000BCEB75 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		02385C03298D886C00BCEB75 /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
-		0238C29329882EB400174A02 /* AudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
 		0238C29D298A5FB700174A02 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		0238C2A0298AF0E400174A02 /* SituationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationsView.swift; sourceTree = "<group>"; };
 		028EED5E2983EA3C00385273 /* SMTechPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMTechPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,7 +65,10 @@
 		028EED7D2983F08900385273 /* ContentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListViewModel.swift; sourceTree = "<group>"; };
 		028EED802983F33E00385273 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		028EED842984453900385273 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		028EED8C29844DB400385273 /* ContenfulAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContenfulAPI.swift; sourceTree = "<group>"; };
+		02B3B79C29917CC900141EC5 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		02B3B7A129918D5600141EC5 /* TechniqueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniqueModel.swift; sourceTree = "<group>"; };
+		02B3B7AA2991CB6000141EC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		02F132E52991705A0094ADC3 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +76,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B3B7AE2991CBDD00141EC5 /* FirebaseAnalytics in Frameworks */,
+				02B3B7A52991CB0600141EC5 /* AppboyKit in Frameworks */,
+				02B3B7A92991CB0600141EC5 /* AppboyUI in Frameworks */,
+				02B3B7A72991CB0600141EC5 /* AppboyPushStory in Frameworks */,
+				02B3B7B02991CBDD00141EC5 /* FirebaseAnalyticsSwift in Frameworks */,
+				02B3B7B62991CBDD00141EC5 /* FirebaseRemoteConfigSwift in Frameworks */,
 				028EED8B29844D5600385273 /* Contentful in Frameworks */,
+				02B3B7B22991CBDD00141EC5 /* FirebaseCrashlytics in Frameworks */,
+				02F132E4299145EA0094ADC3 /* Chargebee in Frameworks */,
 				028EED882984474400385273 /* Apollo in Frameworks */,
+				02B3B7B42991CBDD00141EC5 /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,8 +190,9 @@
 		028EED712983ED9500385273 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				02385BED298AFAEB00BCEB75 /* SituationsMaping.swift */,
+				02F132E52991705A0094ADC3 /* AnalyticsManager.swift */,
 				02385C01298D883000BCEB75 /* Colors.swift */,
+				02385BED298AFAEB00BCEB75 /* SituationsMaping.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -177,6 +200,7 @@
 		028EED722983ED9A00385273 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				02B3B7AA2991CB6000141EC5 /* GoogleService-Info.plist */,
 				028EED612983EA3C00385273 /* SMTechPrototypeApp.swift */,
 				028EED632983EA3C00385273 /* ContentView.swift */,
 			);
@@ -186,7 +210,6 @@
 		028EED732983EDA100385273 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				028EED8C29844DB400385273 /* ContenfulAPI.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -202,9 +225,9 @@
 		028EED752983EDB000385273 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0238C29329882EB400174A02 /* AudioModel.swift */,
 				0238C29D298A5FB700174A02 /* ContentModel.swift */,
 				02385BF2298C039C00BCEB75 /* SituationModel.swift */,
+				02B3B7A129918D5600141EC5 /* TechniqueModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,6 +238,7 @@
 				02385BF4298C05AA00BCEB75 /* ArrayExtension.swift */,
 				028EED842984453900385273 /* ColorExtension.swift */,
 				02385C03298D886C00BCEB75 /* UIScreenExtension.swift */,
+				02B3B79C29917CC900141EC5 /* ViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,6 +287,15 @@
 			packageProductDependencies = (
 				028EED872984474400385273 /* Apollo */,
 				028EED8A29844D5600385273 /* Contentful */,
+				02F132E3299145EA0094ADC3 /* Chargebee */,
+				02B3B7A42991CB0600141EC5 /* AppboyKit */,
+				02B3B7A62991CB0600141EC5 /* AppboyPushStory */,
+				02B3B7A82991CB0600141EC5 /* AppboyUI */,
+				02B3B7AD2991CBDD00141EC5 /* FirebaseAnalytics */,
+				02B3B7AF2991CBDD00141EC5 /* FirebaseAnalyticsSwift */,
+				02B3B7B12991CBDD00141EC5 /* FirebaseCrashlytics */,
+				02B3B7B32991CBDD00141EC5 /* FirebaseRemoteConfig */,
+				02B3B7B52991CBDD00141EC5 /* FirebaseRemoteConfigSwift */,
 			);
 			productName = SMTechPrototype;
 			productReference = 028EED5E2983EA3C00385273 /* SMTechPrototype.app */;
@@ -295,6 +328,9 @@
 			packageReferences = (
 				028EED862984474400385273 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 				028EED8929844D5600385273 /* XCRemoteSwiftPackageReference "contentful" */,
+				02F132E2299145EA0094ADC3 /* XCRemoteSwiftPackageReference "chargebee-ios" */,
+				02B3B7A32991CB0600141EC5 /* XCRemoteSwiftPackageReference "Appboy-ios-sdk" */,
+				02B3B7AC2991CBDD00141EC5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 028EED5F2983EA3C00385273 /* Products */;
 			projectDirPath = "";
@@ -312,6 +348,7 @@
 			files = (
 				028EED692983EA3D00385273 /* Preview Assets.xcassets in Resources */,
 				028EED662983EA3D00385273 /* Assets.xcassets in Resources */,
+				02B3B7AB2991CB6000141EC5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,9 +359,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0238C29429882EB400174A02 /* AudioModel.swift in Sources */,
 				02385C02298D883000BCEB75 /* Colors.swift in Sources */,
 				02385BEE298AFAEB00BCEB75 /* SituationsMaping.swift in Sources */,
+				02B3B79D29917CC900141EC5 /* ViewExtension.swift in Sources */,
 				0238C2A1298AF0E400174A02 /* SituationsView.swift in Sources */,
 				02385BF9298D83B300BCEB75 /* PlayerView.swift in Sources */,
 				02385BFF298D87A300BCEB75 /* ProgressbarView.swift in Sources */,
@@ -334,9 +371,10 @@
 				028EED622983EA3C00385273 /* SMTechPrototypeApp.swift in Sources */,
 				02385BF3298C039C00BCEB75 /* SituationModel.swift in Sources */,
 				02385BFC298D862100BCEB75 /* PlayerViewModel.swift in Sources */,
+				02F132E62991705A0094ADC3 /* AnalyticsManager.swift in Sources */,
 				028EED7B2983EFE400385273 /* ContentListView.swift in Sources */,
+				02B3B7A229918D5600141EC5 /* TechniqueModel.swift in Sources */,
 				028EED812983F33E00385273 /* CardView.swift in Sources */,
-				028EED8D29844DB400385273 /* ContenfulAPI.swift in Sources */,
 				02385BF5298C05AA00BCEB75 /* ArrayExtension.swift in Sources */,
 				028EED852984453900385273 /* ColorExtension.swift in Sources */,
 				02385BF1298AFD0A00BCEB75 /* SituationsViewModel.swift in Sources */,
@@ -466,13 +504,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SMTechPrototype/Preview Content\"";
-				DEVELOPMENT_TEAM = J79W5LYB5S;
+				DEVELOPMENT_TEAM = EHESBKNNV3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SMTechPrototype/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -482,11 +522,15 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lss.SMTechPrototype;
+				PRODUCT_BUNDLE_IDENTIFIER = SMTechPrototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -495,13 +539,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SMTechPrototype/Preview Content\"";
-				DEVELOPMENT_TEAM = J79W5LYB5S;
+				DEVELOPMENT_TEAM = EHESBKNNV3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SMTechPrototype/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -511,11 +557,15 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lss.SMTechPrototype;
+				PRODUCT_BUNDLE_IDENTIFIER = SMTechPrototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -559,6 +609,30 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		02B3B7A32991CB0600141EC5 /* XCRemoteSwiftPackageReference "Appboy-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Appboy/Appboy-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		02B3B7AC2991CBDD00141EC5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		02F132E2299145EA0094ADC3 /* XCRemoteSwiftPackageReference "chargebee-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/chargebee/chargebee-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -571,6 +645,51 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 028EED8929844D5600385273 /* XCRemoteSwiftPackageReference "contentful" */;
 			productName = Contentful;
+		};
+		02B3B7A42991CB0600141EC5 /* AppboyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B3B7A32991CB0600141EC5 /* XCRemoteSwiftPackageReference "Appboy-ios-sdk" */;
+			productName = AppboyKit;
+		};
+		02B3B7A62991CB0600141EC5 /* AppboyPushStory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B3B7A32991CB0600141EC5 /* XCRemoteSwiftPackageReference "Appboy-ios-sdk" */;
+			productName = AppboyPushStory;
+		};
+		02B3B7A82991CB0600141EC5 /* AppboyUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B3B7A32991CB0600141EC5 /* XCRemoteSwiftPackageReference "Appboy-ios-sdk" */;
+			productName = AppboyUI;
+		};
+		02B3B7AD2991CBDD00141EC5 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B3B7AC2991CBDD00141EC5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		02B3B7AF2991CBDD00141EC5 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B3B7AC2991CBDD00141EC5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		02B3B7B12991CBDD00141EC5 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B3B7AC2991CBDD00141EC5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		02B3B7B32991CBDD00141EC5 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B3B7AC2991CBDD00141EC5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		02B3B7B52991CBDD00141EC5 /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B3B7AC2991CBDD00141EC5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
+		02F132E3299145EA0094ADC3 /* Chargebee */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02F132E2299145EA0094ADC3 /* XCRemoteSwiftPackageReference "chargebee-ios" */;
+			productName = Chargebee;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

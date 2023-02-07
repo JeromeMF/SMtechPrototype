@@ -19,6 +19,7 @@ class SituationsViewModel: ObservableObject {
     private var topics: [String] = []
     private var fileName: String = ""
     private var fileUrl: URL = URL(string: "empty")!
+    private var premium: Bool = false
     
     @Published var contentArray: [ContentModel] = []
     @Published var situationsArray: [SituationModel] = []
@@ -33,6 +34,7 @@ class SituationsViewModel: ObservableObject {
         
         var tempArr: [SituationModel] = []
         var tempArr2: [SituationModel] = []
+        var techniquesArr: [TechniqueModel] = []
         
         client.fetchArray(of: Entry.self, matching: query) { result in
             
@@ -62,15 +64,22 @@ class SituationsViewModel: ObservableObject {
                             }
                         }
                     }
-                                        
+                    
+                    if let premium = entry.fields["premium"] as? Bool {
+                        self.premium = premium
+                    }
+                    
                     //                    if let packages = entry.fields.linkedEntry(at: "package") {
                     //                        print(packages.fields)
                     //                    }
                     
-                    //                    if let topics = entry.fields.linkedEntries(at: "topics") {
-                    //                        DispatchQueue.main.async {
-                    //                        }
-                    //                    }
+                    if let techniques = entry.fields.linkedEntries(at: "techniques") {
+                        techniques.forEach { entry in
+                            if let techName = entry.fields["name"] as? String {
+                                techniquesArr.append(TechniqueModel(name: techName))
+                            }
+                        }
+                    }
                     
                     if let file = entry.fields.linkedAsset(at: "file") {
                         self.fileName = file.title ?? ""
@@ -86,19 +95,22 @@ class SituationsViewModel: ObservableObject {
                                                    speaker: self.speaker,
                                                    situations: tempArr,
                                                    topics: [],
+                                                   techniques: techniquesArr,
                                                    fileTitle: self.fileName,
-                                                   fileUrl: self.fileUrl)
+                                                   fileUrl: self.fileUrl,
+                                                   premium: self.premium)
                     
                     
                     DispatchQueue.main.async {
                         self.situationsArray = tempArr2.removingDuplicates()
                         self.contentArray.append(tempContent)
-//                        print("✅ \(self.situationsArray)")
-//                        print("🔥 \(tempContent.situations) \(tempContent.situations.count)")
-//                        print("🚨 \(self.contentArray)")
+                        //                        print("✅ \(self.situationsArray)")
+                        //                        print("🔥 \(tempContent.situations) \(tempContent.situations.count)")
+                        //                        print("🚨 \(self.contentArray)")
                     }
                     
                     tempArr.removeAll()
+                    techniquesArr.removeAll()
                 }
             case .failure(let error):
                 print("Oh no something went wrong: \(error)")
